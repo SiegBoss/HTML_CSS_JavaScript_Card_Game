@@ -56,8 +56,8 @@ h1{
     position: absolute;
     width: 80px;
     height: 100px;
-    top: 100px;
-    left: 140px;
+    top: 150px;
+    left: 295px;
     transition: transform 0.5s;
     transform-style: preserve-3d;
     margin: 20px;
