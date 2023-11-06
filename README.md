@@ -22,7 +22,7 @@ El proyecto consta de los siguientes archivos y carpetas:
 
 ## Demostración
 
-Puedes ver una demostración del Memorama en funcionamiento en el siguiente enlace: 
+Puedes ver una demostración del `Memorama` en funcionamiento en el siguiente enlace: 
 
 https://siegboss.github.io/HTML_CSS_JavaScript_Card_Game/
 
@@ -52,6 +52,6 @@ The project consists of the following files and folders:
 
 ## Demo
 
-You can see a demonstration of the Memory Game in operation at the following link:
+You can see a demonstration of the `Memory Game` in operation at the following link:
 
 https://siegboss.github.io/HTML_CSS_JavaScript_Card_Game/
