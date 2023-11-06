@@ -13,6 +13,7 @@ var images = [watermelon, watermelon2, apple, apple2, avocado, avocado2, banana,
 var fruits = [0, 0, 0, 0, 0, 0, 0, 0];
 var move = 0;
 var x = 0;
+var pulse = 0;
 
 //Funcion para voltear las cartas | Function to flip the cards
 function flipImage(val) {
@@ -104,6 +105,7 @@ function flipImage(val) {
     //Si todas las cartas estan volteadas, se reinicia el juego | If all cards are flipped, the game restarts
     if (fruits[0] == 1 && fruits[1] == 1 && fruits[2] == 1 && fruits[3] == 1 && fruits[4] == 1 && fruits[5] == 1 && fruits[6] == 1 && fruits[7] == 1) {
         setTimeout(function () {
+            pulse = 0;
             document.getElementById("container__label").classList.add("animate");
             shuffleImages();
             fruits = [0, 0, 0, 0, 0, 0, 0, 0];
@@ -115,12 +117,18 @@ function flipImage(val) {
             avocado2.classList.toggle('is-flipped');
             banana.classList.toggle('is-flipped');
             banana2.classList.toggle('is-flipped');
+            pulse = 0;
         }, 1000);
     }
 }
 
 //Funcion para revolver las cartas | Function to shuffle the cards
 function shuffleImages() {
+
+    //Si ya se revolvieron las cartas, no se puede revolver otra vez | If the cards are already shuffled, you can't shuffle them again
+    if(pulse == 1){
+        return;
+    }
 
     //Posiciones de las cartas | cards positions
     let positions = [
@@ -144,7 +152,7 @@ function shuffleImages() {
         images[i].classList.add("transicion");
     }
 
-    //Voltea las cartas | flip cards
+    //Voltea las cartas durante 1 segundo | flip the cards for 1 second
     setTimeout(function () {
         watermelon.classList.toggle('is-flipped');
         watermelon2.classList.toggle('is-flipped');
@@ -156,6 +164,7 @@ function shuffleImages() {
         banana2.classList.toggle('is-flipped');
     }, 1000);
 
+    //Regresa las cartas a su posicion original | return the cards to their original position
     watermelon.classList.toggle('is-flipped');
     watermelon2.classList.toggle('is-flipped');
     apple.classList.toggle('is-flipped');
@@ -164,4 +173,6 @@ function shuffleImages() {
     avocado2.classList.toggle('is-flipped');
     banana.classList.toggle('is-flipped');
     banana2.classList.toggle('is-flipped');
+
+    pulse++;
 }
