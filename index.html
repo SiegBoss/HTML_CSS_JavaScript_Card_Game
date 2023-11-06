@@ -7,8 +7,6 @@
         <link rel="stylesheet" type="text/css" href="normalize.css">
         <!--Enlazar el card_game.css | Bind the card_game.css-->
         <link rel="stylesheet" type="text/css" href="card_game.css">
-        <!--Tipografía | Typography-->
-        <link href="https://fonts.googleapis.com/css2?family=Geologica&family=Montserrat:wght@600&family=Pixelify+Sans&family=Roboto:wght@100&display=swap" rel="stylesheet" />
 
         <!--Título de la página | Page title-->
         <h1>Memorama</h1>
@@ -16,50 +14,55 @@
         <!-- Contenedor principal | Main container -->
         <div class="container" id="container">
 
+            <!-- Contenedor de la etiqueta | Label container -->
+            <label for="text" id="container__label" style="opacity: 0;" >Ganaste</label>
+
             <!-- Contenedor de la carte de la sandía | Watermelon card container -->
-            <div class="container__div-watermelon" id="container__div-watermelon">
-                <img src="letter disguise.svg" class="container__div-watermelon-disguise" onclick="flipImage('watermelon_disguise')">
-                <img src="letter watermelon.svg" class="container__div-watermelon-show">
+            <div class="container__div-image" id="container__div-watermelon">
+                <img src="letter disguise.svg" class="container__div-disguise" onclick="flipImage('watermelon_disguise')">
+                <img src="letter watermelon.svg" class="container__div-show">
             </div>
-            <div class="container__div-watermelon-2" id="container__div-watermelon-2">
-                <img src="letter disguise.svg" class="container__div-watermelon-disguise" onclick="flipImage('watermelon_disguise_2')">
-                <img src="letter watermelon.svg" class="container__div-watermelon-show">
+            <div class="container__div-image" id="container__div-watermelon-2">
+                <img src="letter disguise.svg" class="container__div-disguise" onclick="flipImage('watermelon_disguise_2')">
+                <img src="letter watermelon.svg" class="container__div-show">
             </div>
 
             <!-- Contenedor de la carte de la manzana | Apple card container -->
-            <div class="container__div-apple" id="container__div-apple">
-                <img src="letter disguise.svg" class="container__div-apple-disguise" onclick="flipImage('apple_disguise')">
-                <img src="letter apple.svg" class="container__div-apple-show">
+            <div class="container__div-image" id="container__div-apple">
+                <img src="letter disguise.svg" class="container__div-disguise" onclick="flipImage('apple_disguise')">
+                <img src="letter apple.svg" class="container__div-show">
             </div>
-            <div class="container__div-apple-2" id="container__div-apple-2">
-                <img src="letter disguise.svg" class="container__div-apple-disguise" onclick="flipImage('apple_disguise_2')">
-                <img src="letter apple.svg" class="container__div-apple-show">   
+            <div class="container__div-image" id="container__div-apple-2">
+                <img src="letter disguise.svg" class="container__div-disguise" onclick="flipImage('apple_disguise_2')">
+                <img src="letter apple.svg" class="container__div-show">   
             </div>
 
             <!-- Contenedor de la carte del aguacate | Avocado card container -->
-            <div class="container__div-avocado" id="container__div-avocado">
-                <img src="letter disguise.svg" class="container__div-avocado-disguise" onclick="flipImage('avocado_disguise')">
-                <img src="letter avocado.svg" class="container__div-avocado-show">
+            <div class="container__div-image" id="container__div-avocado">
+                <img src="letter disguise.svg" class="container__div-disguise" onclick="flipImage('avocado_disguise')">
+                <img src="letter avocado.svg" class="container__div-show">
             </div>
-            <div class="container__div-avocado-2" id="container__div-avocado-2">
-                <img src="letter disguise.svg" class="container__div-avocado-disguise" onclick="flipImage('avocado_disguise_2')">
-                <img src="letter avocado.svg" class="container__div-avocado-show">
+            <div class="container__div-image" id="container__div-avocado-2">
+                <img src="letter disguise.svg" class="container__div-disguise" onclick="flipImage('avocado_disguise_2')">
+                <img src="letter avocado.svg" class="container__div-show">
             </div>
 
             <!-- Contenedor de la carte del plátano | Banana card container -->
-            <div class="container__div-banana" id="container__div-banana">
-                <img src="letter disguise.svg" class="container__div-banana-disguise" onclick="flipImage('banana_disguise')">
-                <img src="letter banana.svg" class="container__div-banana-show">
+            <div class="container__div-image" id="container__div-banana">
+                <img src="letter disguise.svg" class="container__div-disguise" onclick="flipImage('banana_disguise')">
+                <img src="letter banana.svg" class="container__div-show">
             </div>
-            <div class="container__div-banana-2" id="container__div-banana-2">            
-                <img src="letter disguise.svg" class="container__div-banana-disguise" onclick="flipImage('banana_disguise_2')">                
-                <img src="letter banana.svg" class="container__div-banana-show">               
+            <div class="container__div-image" id="container__div-banana-2">            
+                <img src="letter disguise.svg" class="container__div-disguise" onclick="flipImage('banana_disguise_2')">                
+                <img src="letter banana.svg" class="container__div-show">               
             </div>
 
-           
-            <button class="container__div-button" onclick="shuffleImages()">Mezclar imágenes</button>
+            <!-- boton de mezclar imágenes | shuffle images button -->
+            <button class="container__div-button" onclick="shuffleImages()">Mezclar</button>
 
         </div>
+
+        <!-- Enlazar el card_game.js | Bind the card_game.js -->
         <script src="card_game.js"></script>
     </body>
 </html>
