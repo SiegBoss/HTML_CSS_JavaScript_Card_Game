@@ -26,6 +26,10 @@ Puedes ver una demostración del `Memorama` en funcionamiento en el siguiente en
 
 https://siegboss.github.io/HTML_CSS_JavaScript_Card_Game/
 
+## Licencia
+
+Este proyecto está bajo la licencia MIT. Consulta el archivo `LICENSE` para obtener más detalles.
+
 ------------------------------
 
 # Memory Game in HTML, CSS and JavaScript
@@ -55,3 +59,7 @@ The project consists of the following files and folders:
 You can see a demonstration of the `Memory Game` in operation at the following link:
 
 https://siegboss.github.io/HTML_CSS_JavaScript_Card_Game/
+
+## License
+
+This project is under the MIT license. Check the `LICENSE` file for more details.
