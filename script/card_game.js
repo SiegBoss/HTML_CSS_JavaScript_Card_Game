@@ -1,12 +1,12 @@
 //Declare variables de las cartas | Declare cards variables
-var watermelon = document.getElementById("container__div-watermelon");
-var watermelon2 = document.getElementById("container__div-watermelon-2");
-var apple = document.getElementById("container__div-apple");
-var apple2 = document.getElementById("container__div-apple-2");
-var avocado = document.getElementById("container__div-avocado");
-var avocado2 = document.getElementById("container__div-avocado-2");
-var banana = document.getElementById("container__div-banana");
-var banana2 = document.getElementById("container__div-banana-2");
+var watermelon = document.getElementById("container-watermelon");
+var watermelon2 = document.getElementById("container-watermelon-2");
+var apple = document.getElementById("container-apple");
+var apple2 = document.getElementById("container-apple-2");
+var avocado = document.getElementById("container-avocado");
+var avocado2 = document.getElementById("container-avocado-2");
+var banana = document.getElementById("container-banana");
+var banana2 = document.getElementById("container-banana-2");
 
 //Declarando las variables de ayuda | Declare help variables
 var images = [watermelon, watermelon2, apple, apple2, avocado, avocado2, banana, banana2];
@@ -106,7 +106,6 @@ function flipImage(val) {
     if (fruits[0] == 1 && fruits[1] == 1 && fruits[2] == 1 && fruits[3] == 1 && fruits[4] == 1 && fruits[5] == 1 && fruits[6] == 1 && fruits[7] == 1) {
         setTimeout(function () {
             pulse = 0;
-            document.getElementById("container__label").classList.add("animate");
             shuffleImages();
             fruits = [0, 0, 0, 0, 0, 0, 0, 0];
             watermelon.classList.toggle('is-flipped');
@@ -125,23 +124,41 @@ function flipImage(val) {
 //Funcion para revolver las cartas | Function to shuffle the cards
 function shuffleImages() {
 
+    let positions = [];
+
     //Si ya se revolvieron las cartas, no se puede revolver otra vez | If the cards are already shuffled, you can't shuffle them again
     if(pulse == 1){
         return;
     }
 
     //Posiciones de las cartas | cards positions
-    let positions = [
-        { left: "20px", top: "10px" },
-        { left: "180px", top: "10px" },
-        { left: "340px", top: "10px" },
-        { left: "500px", top: "10px" },
-        { left: "20px", top: "250px" },
-        { left: "180px", top: "250px" },
-        { left: "340px", top: "250px" },
-        { left: "500px", top: "250px" }
-    ];
+    if(screen.width < 600){
+        positions = [
+            { left: "20px", top: "10px" },
+            { left: "20px", top: "120px" },
+            { left: "20px", top: "230px" },
+            { left: "20px", top: "340px" },
+            { left: "150px", top: "10px" },
+            { left: "150px", top: "120px" },
+            { left: "150px", top: "230px" },
+            { left: "150px", top: "340px" }
+        ];
 
+    }else{
+        positions = [
+            { left: "20px", top: "10px" },
+            { left: "160px", top: "10px" },
+            { left: "300px", top: "10px" },
+            { left: "440px", top: "10px" },
+            { left: "20px", top: "200px" },
+            { left: "160px", top: "200px" },
+            { left: "300px", top: "200px" },
+            { left: "440px", top: "200px" }
+        ];
+    }
+
+
+    
     //Revuelve las posiciones | shuffle positions
     positions.sort(() => Math.random() - 0.5);
 
