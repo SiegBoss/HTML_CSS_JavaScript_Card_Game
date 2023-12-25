@@ -127,12 +127,12 @@ function shuffleImages() {
     let positions = [];
 
     //Si ya se revolvieron las cartas, no se puede revolver otra vez | If the cards are already shuffled, you can't shuffle them again
-    if(pulse == 1){
+    if (pulse == 1) {
         return;
     }
 
     //Posiciones de las cartas | cards positions
-    if(screen.width < 600){
+    if (screen.width < 600) {
         positions = [
             { left: "20px", top: "10px" },
             { left: "20px", top: "120px" },
@@ -144,7 +144,7 @@ function shuffleImages() {
             { left: "150px", top: "340px" }
         ];
 
-    }else{
+    } else {
         positions = [
             { left: "20px", top: "10px" },
             { left: "160px", top: "10px" },
@@ -158,7 +158,7 @@ function shuffleImages() {
     }
 
 
-    
+
     //Revuelve las posiciones | shuffle positions
     positions.sort(() => Math.random() - 0.5);
 
