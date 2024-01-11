@@ -17,7 +17,7 @@ h1 {
     color: #f2e8cf;
 }
 
-
+/*---------------------------*/
 /* Estilo del Contenedor de las Cartas | Container Style*/
 .main-container {
     width: 600px;
@@ -39,7 +39,6 @@ h1 {
     transform-style: preserve-3d;
 }
 
-
 .container-disguise,
 .container-show {
     width: 100%;
@@ -52,8 +51,6 @@ h1 {
     transform: rotateY(180deg);
 }
 
-
-/*Estilo de los Botones | Buttons Style*/
 .container-button {
     font-size: 15px;
     width: 100px;
@@ -82,6 +79,7 @@ h1 {
 }
 
 
+/*---------------------------*/
 /*Animaciones y Transiciones | Animations and Transitions*/
 @keyframes animationAppear {
     from {
@@ -118,34 +116,33 @@ h1 {
 }
 
 
+/*---------------------------*/
 /*Pie de pagina | Footer*/
-.dark-section {
-    color: #f5f6f7;
-    background-color: #1b1b32;
-}
-
 footer {
-    min-height: 400px;
-}
-
-.footer-page {
+    margin-top: 100px;
+    min-height: 500px;
     margin-top: 200px;
+    background-color: #1b1b32;
+    color: #fff;
 }
 
-.footer-icon {
+.footer_text_f {
+    font-size: 1.5rem;
+}
+
+.footer_text {
+    margin-top: 30px;
+    font-size: 1.2rem;
+    color: #FFFFFF;
+}
+
+.footer_icon {
     height: 80px;
     width: 80px;
     margin: 10px;
 }
 
-.footer-text {
-    font-size: 1.5rem;
-    padding: 20px;
-    margin-bottom: 30px;
-    font-family: 'Quicksand', sans-serif;
-}
-
-.social-media-icons a {
+.social_media_icons a {
     width: 50px;
     height: 50px;
     display: flex;
@@ -158,13 +155,18 @@ footer {
     transition: all 0.2s ease-in;
 }
 
-.social-media-icons i {
+.social_media_icons i {
     color: white;
     font-size: 1.5rem;
     transition: all 0.2s ease-in;
 }
 
-.social-media-icons a:hover i {
+.social_media_icons a:hover {
+    background-color: white;
+    border: 2px solid rgb(13, 110, 253);
+}
+
+.social_media_icons a:hover i {
     color: black;
 }
 
@@ -174,6 +176,12 @@ footer {
     padding: 20px;
 }
 
+.contact button:hover i {
+    color: black;
+}
+
+
+/*---------------------------*/
 /*Responsive*/
 @media screen and (max-width: 600px) {
     .main-container {
