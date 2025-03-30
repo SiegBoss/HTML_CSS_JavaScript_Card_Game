@@ -1,202 +1,202 @@
-/*Estilos generales | General Styles*/
+/* ------------------------------------------ */
+/* ESTILOS GENERALES | STYLES */
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #386641;
-}
-
-h1 {
-    text-transform: uppercase;
-    font-size: 40px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    height: 60px;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at center, #3b2a1a 0%, #1f140a 100%);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    background-color: rgb(0, 0, 0, 0.5);
-    color: #f2e8cf;
+    min-height: 100vh;
 }
 
-/*---------------------------*/
-/* Estilo del Contenedor de las Cartas | Container Style*/
+/* Título principal con estilo de casino | Main title with casino style */
+h1 {
+    margin-top: 30px;
+    font-size: 3rem;
+    color: #f3e5ab;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px 25px;
+    border-radius: 20px;
+}
+
+/* ------------------------------------------ */
+/* MESA Y CARTAS | TABLE AND CARDS */
+/* Área de la mesa (contenedor de cartas) | Table area (card container) */
 .main-container {
-    width: 600px;
-    height: 370px;
-    margin: 50px auto;
-    position: relative;
-    background-color: #bc4749;
-    box-shadow: black 0px 0px 20px 0px;
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(2, 100px);
+    gap: 20px;
+    background: #755b3b;
+    border: 5px solid #5a4229;
+    border-radius: 25px;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5), 0 8px 25px rgba(0, 0, 0, 0.6);
+    padding: 60px;
+    margin: auto;
+    margin-top: 30px;
+    justify-content: center;
 }
 
+/* Cada carta | Each card */
 .container-image {
     width: 100px;
-    height: 125px;
-    top: 25%;
-    left: 37%;
-    margin: 20px;
-    position: absolute;
-    transition: transform 0.5s;
-    transform-style: preserve-3d;
+    height: 120px;
+    perspective: 1000px;
+    position: relative;
 }
 
-.container-disguise,
-.container-show {
-    width: 100%;
-    height: 100%;
+/* Transición suave | Smooth transition */
+.transicion {
+    transition: transform 0.3s ease;
+}
+
+/* Caras de la carta | Card faces */
+.container-image img {
     position: absolute;
+    width: 100px;
+    height: 120px;
+    border-radius: 12px;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.4);
     backface-visibility: hidden;
+    transition: transform 0.6s;
 }
 
+/* Cara frontal (pregunta) | Front face (question)*/
+.container-disguise {
+    transform: rotateY(0deg);
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Cara trasera (respuesta) | Back face (answer)*/
 .container-show {
     transform: rotateY(180deg);
 }
 
+/* Animación de giro al hacer flip | Animation of flip */
+.container-image.is-flipped .container-disguise {
+    transform: rotateY(180deg);
+}
+
+.container-image.is-flipped .container-show {
+    transform: rotateY(0deg);
+}
+
+/* ------------------------------------------ */
+/* BOTÓN "MEZCLAR" | "SHUFFLE" BUTTON */
 .container-button {
-    font-size: 15px;
-    width: 100px;
-    height: 40px;
-    top: 105%;
-    left: 40%;
-    cursor: pointer;
-    position: absolute;
+    margin-top: 25px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #ddb66f;
+    color: #5b3e1c;
+    border: 3px solid #b08851;
     border-radius: 10px;
-    color: black;
-    border: 3px solid black;
-    background: #6a994e;
-    box-shadow: 3px 3px #6a994e;
-    
+    box-shadow: 0 3px 0 #a07a45;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .container-button:hover {
-    background: #bc4749 !important;
-    box-shadow: 3px 3px #bc4749 !important;
-    border: 3px solid black;
+    background-color: #e3c080;
+    transform: scale(1.05);
 }
 
 .container-button:active {
-    box-shadow: none;
-    transform: translate(3px, 3px);
+    transform: scale(0.95);
+    box-shadow: 0 2px 0 #8c6b3e;
 }
 
+/* ------------------------------------------ */
+/* MENSAJE DE VICTORIA | WIN MESSAGE */
+#win-message {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff9c4;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 20px 40px;
+    border-radius: 20px;
+    margin-top: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+    text-align: center;
+    animation: pop 0.5s ease;
+    z-index: 100;
+}
 
-/*---------------------------*/
-/*Animaciones y Transiciones | Animations and Transitions*/
-@keyframes animationAppear {
-    from {
+/* Oculto por defecto | Hidden by default */
+.win-hidden {
+    display: none;
+}
+
+/* Animación de aparición | Appearance animation */
+@keyframes pop {
+    0% {
+        transform: scale(0.6);
         opacity: 0;
     }
-
-    to {
+    100% {
+        transform: scale(1);
         opacity: 1;
     }
 }
 
-@keyframes animationFade {
-    from {
-        opacity: 1;
+/* ------------------------------------------ */
+/* RESPONSIVE */
+/* Tablets */
+@media (max-width: 991px) {
+    h1 {
+        font-size: 2.2rem;
     }
 
-    to {
-        opacity: 0;
-    }
-}
-
-.animate {
-    animation-name: animationAppear;
-    animation-duration: 2s;
-    animation-name: animationFade;
-}
-
-.container-image.is-flipped {
-    transform: rotateY(180deg);
-}
-
-.transicion {
-    transition: all 0.1s ease-out;
-}
-
-
-/*---------------------------*/
-/*Pie de pagina | Footer*/
-footer {
-    margin-top: 100px;
-    min-height: 500px;
-    margin-top: 200px;
-    background-color: #1b1b32;
-    color: #fff;
-}
-
-.footer_text_f {
-    font-size: 1.5rem;
-}
-
-.footer_text {
-    margin-top: 30px;
-    font-size: 1.2rem;
-    color: #FFFFFF;
-}
-
-.footer_icon {
-    height: 80px;
-    width: 80px;
-    margin: 10px;
-}
-
-.social_media_icons a {
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2px;
-    margin: 10px;
-    border: 2px solid white;
-    border-radius: 50%;
-    transition: all 0.2s ease-in;
-}
-
-.social_media_icons i {
-    color: white;
-    font-size: 1.5rem;
-    transition: all 0.2s ease-in;
-}
-
-.social_media_icons a:hover {
-    background-color: white;
-    border: 2px solid rgb(13, 110, 253);
-}
-
-.social_media_icons a:hover i {
-    color: black;
-}
-
-.Copyright {
-    font-size: 15px;
-    color: #aeaeae;
-    padding: 20px;
-}
-
-.contact button:hover i {
-    color: black;
-}
-
-
-/*---------------------------*/
-/*Responsive*/
-@media screen and (max-width: 600px) {
     .main-container {
-        width: 300px;
-        height: 500px;
+        grid-template-columns: repeat(3, 100px);
+        grid-template-rows: auto;
+    }
+}
+
+/* Móviles grandes | Large mobiles */
+@media (max-width: 768px) {
+    .main-container {
+        grid-template-columns: repeat(2, 100px);
+        padding: 25px;
     }
 
     .container-button {
-        left: 35%;
+        font-size: 0.95rem;
+    }
+}
+
+/* Móviles pequeños | Small mobiles */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .main-container {
+        grid-template-columns: repeat(2, 90px);
+        gap: 14px;
+        padding: 20px;
     }
 
     .container-image {
-        width: 80px;
-        height: 100px;
-        top: 35%;
-        left: 30%;
+        width: 90px;
+        height: 110px;
+    }
+
+    .container-image img {
+        width: 90px;
+        height: 110px;
+    }
+
+    .container-button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
     }
 }

@@ -2,125 +2,79 @@
 <html>
 
 <head>
-    <!--Metadatos | Metadata-->
+    <!-- Metadatos | Metadata -->
     <meta charset="utf-8" />
     <meta name="author" content="SiegBoss" />
     <meta name="description" content="Portafolio de SiegBoss" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!--Titulo | Title-->
+    <!-- Título | Title -->
     <title>Memorama</title>
-    <!--Icono | Icon-->
+    <!-- Icono | Icon -->
     <link rel="icon" type="image/x-icon" href="images/logo_willy.png" />
-    <!-- Enlazar a Bootstrap | Link to Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
-    <!--Enklazar CSS Estilo | Link CSS Style-->
+    <!-- Enlazar CSS Estilo | Link CSS Style -->
     <link rel="stylesheet" type="text/css" href="./style/index.css" />
-    <!--Tipografias | Fonts-->
+    <!-- Tipografías | Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!---------------------->
-    <!--Título de la página | Page title-->
+    <!-- Título de la página | Page title -->
     <h1>Memorama</h1>
-    <!---------------------->
-    
 
-    <!---------------------->
     <!-- Contenedor principal | Main container -->
     <section>
-        <!-- Contenedor de las cartas | Container of the cards -->
-        <!-- mt-5 = margin-top: 5px -->
-        <!-- rounded-5 = border-radius: 5px -->
-        <div class="main-container mt-5 rounded-5">
+        <div class="main-container">
             <!-- Carta de la sandía | Watermelon card -->
             <div class="container-image" id="container-watermelon">
-                <img src="./assets/letter disguise.svg" class="container-disguise"
-                    onclick="flipImage('watermelon-disguise')" />
+                <img src="./assets/letter disguise.svg" class="container-disguise" onclick="flipImage(this.parentElement)" />
                 <img src="./assets/letter watermelon.svg" class="container-show" />
             </div>
             <div class="container-image" id="container-watermelon-2">
-                <img src="./assets/letter disguise.svg" class="container-disguise"
-                    onclick="flipImage('watermelon-disguise-2')" />
+                <img src="./assets/letter disguise.svg" class="container-disguise" onclick="flipImage(this.parentElement)" />
                 <img src="./assets/letter watermelon.svg" class="container-show" />
             </div>
             <!-- Carta de la fresa | Strawberry card -->
             <div class="container-image" id="container-apple">
-                <img src="./assets/letter disguise.svg" class="container-disguise"
-                    onclick="flipImage('apple-disguise')" />
+                <img src="./assets/letter disguise.svg" class="container-disguise" onclick="flipImage(this.parentElement)" />
                 <img src="./assets/letter apple.svg" class="container-show" />
             </div>
             <div class="container-image" id="container-apple-2">
-                <img src="./assets/letter disguise.svg" class="container-disguise"
-                    onclick="flipImage('apple-disguise-2')" />
+                <img src="./assets/letter disguise.svg" class="container-disguise" onclick="flipImage(this.parentElement)"/>
                 <img src="./assets/letter apple.svg" class="container-show" />
             </div>
             <!-- Carta del aguacate | Avocado card -->
             <div class="container-image" id="container-avocado">
-                <img src="./assets/letter disguise.svg" class="container-disguise"
-                    onclick="flipImage('avocado-disguise')" />
+                <img src="./assets/letter disguise.svg" class="container-disguise" onclick="flipImage(this.parentElement)" />
                 <img src="./assets/letter avocado.svg" class="container-show" />
             </div>
             <div class="container-image" id="container-avocado-2">
-                <img src="./assets/letter disguise.svg" class="container-disguise"
-                    onclick="flipImage('avocado-disguise-2')" />
+                <img src="./assets/letter disguise.svg" class="container-disguise" onclick="flipImage(this.parentElement)" />
                 <img src="./assets/letter avocado.svg" class="container-show" />
             </div>
             <!-- Carta del plátano | Banana card -->
             <div class="container-image" id="container-banana">
-                <img src="./assets/letter disguise.svg" class="container-disguise"
-                    onclick="flipImage('banana-disguise')" />
+                <img src="./assets/letter disguise.svg" class="container-disguise" onclick="flipImage(this.parentElement)" />
                 <img src="./assets/letter banana.svg" class="container-show" />
             </div>
             <div class="container-image" id="container-banana-2">
-                <img src="./assets/letter disguise.svg" class="container-disguise"
-                    onclick="flipImage('banana-disguise-2')" />
+                <img src="./assets/letter disguise.svg" class="container-disguise" onclick="flipImage(this.parentElement)" />
                 <img src="./assets/letter banana.svg" class="container-show" />
             </div>
-            <!-- boton para mezclar | button to shuffle -->
-            <button class="container-button btn" onclick="shuffleImages()">
-                Mezclar
-            </button>
         </div>
+
+        <!-- Botón para mezclar | Button to shuffle -->
+        <button class="container-button" onclick="shuffleImages()">Mezclar</button>
+
+        <!-- Mensaje de victoria | Win message -->
+        <div id="win-message" class="win-hidden">
+            ¡Ganaste!
+        </div>
+
     </section>
-    <!---------------------->
 
-
-    <!---------------------->
-    <!--Pie de Pagina | Footer-->
-    <footer id="contacto" class="d-flex flex-column align-items-center justify-content-center">
-        <img class="footer_icon" src="./images/logo_willy.png" alt="Logo de la Pagina">
-        <p class="footer_text_f text-center">Tu versión de mañana debería poder vencer a tú versión de hoy</p>
-        <p class="footer_text text-center">Contactame</p>
-        <div class="social_media_icons d-flex flex-wrap align-items-center justify-content-center">
-            <a href="https://twitter.com/SiegBoss" target="_blank" rel="noopener noreferrer">
-                <i class="bi bi-twitter-x"></i>
-            </a>
-            <a href="https://www.instagram.com/siegboss_xp/" target="_blank" rel="noopener noreferrer">
-                <i class="bi bi-instagram"></i>
-            </a>
-            <a href="https://github.com/SiegBoss" target="_blank" rel="noopener noreferrer">
-                <i class="bi bi-github"></i>
-            </a>
-            <a href="https://www.tiktok.com/@siegboss" target="_blank" rel="noopener noreferrer">
-                <i class="bi bi-tiktok"></i>
-            </a>
-        </div>
-        <div class="Copyright">
-            creado por SiegBoss &#169; 2024
-        </div>
-    </footer>
-    <!---------------------->
-
-    <!-- Enlazar el card_game.js | Bind the card_game.js -->
+    <!-- Enlazar el card_game.js | Link the card_game.js -->
     <script src="./script/index.js"></script>
-    <!--Enlazar a Bootstrap | Link to Bootstrap-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
 </body>
-
 </html>
