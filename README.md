@@ -21,7 +21,7 @@ El proyecto incluye los siguientes archivos y carpetas:
 
 ## 🔍 Demostración
 
-Puedes ver el juego en acción en el siguiente enlace:  https://siegboss.github.io/HTML_CSS_JavaScript_Card_Game/
+Puedes ver el juego en acción en el siguiente enlace: https://siegboss.github.io/HTML_CSS_JavaScript_Card_Game/
 
 ## 📄 Licencia
 
