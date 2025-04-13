@@ -1,65 +1,59 @@
-# Memorama en HTML, CSS y JavaScript
+# 🧠 Memorama en HTML, CSS y JavaScript
 
-Este proyecto es un juego de Memorama desarrollado con HTML, CSS y JavaScript. 
+Este proyecto es un juego de **Memorama** desarrollado con **HTML**, **CSS** y **JavaScript**.  
+Las imágenes utilizadas en el juego son de estilo **Pixel Art**, creadas por mí.
 
-Las imágenes utilizadas en el juego son de estilo Pixel Art, creadas por mí.
+## 📁 Estructura del Proyecto
 
-## Estructura del Proyecto
+El proyecto incluye los siguientes archivos y carpetas:
 
-El proyecto consta de los siguientes archivos y carpetas:
+- `index.html`: Contiene la estructura principal del juego.
+- `card_game.css`: Estilos CSS para el diseño y presentación del juego.
+- `card_game.js`: Lógica del juego implementada en JavaScript.
+- `assets/`: Carpeta que contiene las imágenes de estilo Pixel Art utilizadas en el juego.
 
-- `index.html`: Este es el archivo principal que contiene la estructura HTML del juego.
-- `card_game.css`: Este archivo contiene todos los estilos CSS utilizados para dar formato y estilo al juego.
-- `card_game.js`: Este archivo contiene el código JavaScript que proporciona la funcionalidad del juego.
-- `assets`: Esta carpeta contiene todas las imágenes de estilo Pixel Art utilizadas en el juego.
+## 🛠️ Tecnologías Utilizadas
 
-## Herramientas de Desarrollo
+- HTML  
+- CSS  
+- JavaScript  
+- Aseprite (para creación de imágenes)
 
-- HTML
-- CSS
-- JavaScript
-- Aseprite
+## 🔍 Demostración
 
-## Demostración
+Puedes ver el juego en acción en el siguiente enlace:  https://siegboss.github.io/HTML_CSS_JavaScript_Card_Game/
 
-Puedes ver una demostración del `Memorama` en funcionamiento en el siguiente enlace: 
+## 📄 Licencia
 
-https://siegboss.github.io/HTML_CSS_JavaScript_Card_Game/
+Este proyecto está bajo la licencia MIT. Consulta el archivo [`LICENSE`] para más información.
 
-## Licencia
+---
 
-Este proyecto está bajo la licencia MIT. Consulta el archivo `LICENSE` para obtener más detalles.
+# 🧠 Memory Game in HTML, CSS and JavaScript
 
-------------------------------
+This project is a **Memory Game** (Memorama) built using **HTML**, **CSS**, and **JavaScript**.  
+The images used in the game are **Pixel Art** style, created by me.
 
-# Memory Game in HTML, CSS and JavaScript
+## 📁 Project Structure
 
-This project is a Memorama game developed with HTML, CSS and JavaScript.
+The project includes the following files and folders:
 
-The images used in the game are Pixel Art style, created by me.
+- `index.html`: Contains the main HTML structure of the game.
+- `card_game.css`: CSS styles for layout and appearance.
+- `card_game.js`: JavaScript code that handles the game logic.
+- `assets/`: Folder that contains all the Pixel Art style images used in the game.
 
-## Project structure
+## 🛠️ Development Tools
 
-The project consists of the following files and folders:
+- HTML  
+- CSS  
+- JavaScript  
+- Aseprite (for creating pixel art)
 
-- `index.html`: This is the main file that contains the HTML structure of the game.
-- `card_game.css`: This file contains all the CSS styles used to format and style the game.
-- `card_game.js`: This file contains the JavaScript code that provides the game functionality.
-- `assets`: This folder contains all the Pixel Art style images used in the game.
+## 🔍 Demo
 
-## Development tools
+Check out the live demo of the game here: https://siegboss.github.io/HTML_CSS_JavaScript_Card_Game/
 
-- HTML
-- CSS
-- JavaScript
-- Aseprite
+## 📄 License
 
-## Demo
-
-You can see a demonstration of the `Memory Game` in operation at the following link:
-
-https://siegboss.github.io/HTML_CSS_JavaScript_Card_Game/
-
-## License
-
-This project is under the MIT license. Check the `LICENSE` file for more details.
+This project is licensed under the MIT License. See the [`LICENSE`] file for more details.
